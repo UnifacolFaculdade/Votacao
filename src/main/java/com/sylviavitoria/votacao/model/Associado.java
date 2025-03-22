@@ -1,10 +1,13 @@
 package com.sylviavitoria.votacao.model;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,7 +16,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "tb_associados")
-public class Associados {
+public class Associado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,10 +28,13 @@ public class Associados {
     @Column(nullable = false)
     private String nome;
 
-    public Associados() {
+    @OneToMany(mappedBy = "associado")
+    private List<Voto> votos;
+
+    public Associado() {
     }
 
-    public Associados(Long id, String cpf, String nome) {
+    public Associado(Long id, String cpf, String nome) {
         this.id = id;
         this.cpf = cpf;
         this.nome = nome;

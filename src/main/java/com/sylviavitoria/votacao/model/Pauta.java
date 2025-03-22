@@ -1,10 +1,15 @@
 package com.sylviavitoria.votacao.model;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,7 +18,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "tb_pautas")
-public class Pautas {
+public class Pauta {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,11 +29,17 @@ public class Pautas {
     @Column(nullable = false)
     private String titulo;
 
-    public Pautas() {
+    @OneToOne(mappedBy = "pauta", cascade = CascadeType.ALL)
+    private Sessao sessao;
+
+    @OneToMany(mappedBy = "pauta", cascade = CascadeType.ALL)
+    private List<Voto> votos;
+
+    public Pauta() {
         
     }
 
-    public Pautas(Long id, String descricao, String titulo) {
+    public Pauta(Long id, String descricao, String titulo) {
         this.id = id;
         this.descricao = descricao;
         this.titulo = titulo;
