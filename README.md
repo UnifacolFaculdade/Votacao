@@ -16,7 +16,13 @@
 - **Controle de versão**: Git e GitHub  
 
 ## 📚 Wiki  
-  
+
+
+##  🖌️Modelo de domínio Votação
+![image](https://github.com/user-attachments/assets/8adf3516-7d14-43c2-b748-bcabd40d6326)
+
+
+
 
 
 
