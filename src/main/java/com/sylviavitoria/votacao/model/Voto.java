@@ -17,12 +17,10 @@ import jakarta.persistence.UniqueConstraint;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Entity
-@Table(uniqueConstraints = {
+@Table(name = "tb_votos", uniqueConstraints = {
     @UniqueConstraint(columnNames = {"associado_id", "pauta_id"})
 })
-
 @Getter
 @Setter
 public class Voto {
@@ -47,7 +45,7 @@ public class Voto {
         
     }
 
-    public Voto(Long id , Associado associado, Pauta pauta, OpcaoVoto votoFavoravel, LocalDateTime dataVoto) {
+    public Voto(Long id, Associado associado, Pauta pauta, OpcaoVoto votoFavoravel, LocalDateTime dataVoto) {
         this.id = id;
         this.associado = associado;
         this.pauta = pauta;
@@ -55,5 +53,11 @@ public class Voto {
         this.dataVoto = dataVoto;
     }
     
-    
+    @Override
+    public String toString() {
+        return "Voto [id=" + id + 
+               ", pautaId=" + (pauta != null ? pauta.getId() : null) + 
+               ", associadoId=" + (associado != null ? associado.getId() : null) + 
+               ", opcao=" + votoFavoravel + "]";
+    }
 }

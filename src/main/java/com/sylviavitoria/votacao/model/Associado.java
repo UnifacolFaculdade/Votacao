@@ -12,32 +12,35 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
 @Entity
 @Table(name = "tb_associados")
+@Getter
+@Setter
 public class Associado {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    
+    private String nome;
+    
     @Column(unique = true, nullable = false)
     private String cpf;
     
-    @Column(nullable = false)
-    private String nome;
-
     @OneToMany(mappedBy = "associado")
     private List<Voto> votos;
-
+    
     public Associado() {
+        
     }
-
-    public Associado(Long id, String cpf, String nome) {
+    
+    public Associado(Long id, String nome, String cpf) {
         this.id = id;
-        this.cpf = cpf;
         this.nome = nome;
+        this.cpf = cpf;
     }
-
+    
+    @Override
+    public String toString() {
+        return "Associado [id=" + id + ", nome=" + nome + ", cpf=" + cpf + "]";
+    }
 }

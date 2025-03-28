@@ -44,4 +44,10 @@ public class Pauta {
         this.descricao = descricao;
         this.titulo = titulo;
     }
+    
+    
+    @Override
+    public String toString() {
+        return "Pauta [id=" + id + ", titulo=" + titulo + "]";
+    }
 }
