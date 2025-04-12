@@ -2,6 +2,7 @@ package com.sylviavitoria.votacao.model;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.sylviavitoria.votacao.enums.OpcaoVoto;
 
 import jakarta.persistence.Entity;
@@ -28,6 +29,7 @@ public class Voto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "pauta_id")
     private Pauta pauta;

@@ -2,6 +2,8 @@ package com.sylviavitoria.votacao.model;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -29,6 +31,7 @@ public class Pauta {
     @Column(nullable = false)
     private String titulo;
 
+    @JsonBackReference
     @OneToOne(mappedBy = "pauta", cascade = CascadeType.ALL)
     private Sessao sessao;
 
