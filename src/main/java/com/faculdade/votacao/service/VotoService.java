@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.faculdade.votacao.dto.ResultadoVotacaoDTO;
 import com.faculdade.votacao.enums.OpcaoVoto;
+import com.faculdade.votacao.interfaces.VotoInterface;
 import com.faculdade.votacao.model.Associado;
 import com.faculdade.votacao.model.Pauta;
 import com.faculdade.votacao.model.Voto;
@@ -16,7 +17,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
-public class VotoService {
+public class VotoService implements VotoInterface {
 
     @Autowired
     private VotoRepository votoRepository;
