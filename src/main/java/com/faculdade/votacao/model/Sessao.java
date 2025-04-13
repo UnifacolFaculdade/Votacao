@@ -1,6 +1,8 @@
-package com.sylviavitoria.votacao.model;
+package com.faculdade.votacao.model;
 
 import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,6 +23,7 @@ public class Sessao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
+    @JsonBackReference
     @OneToOne
     @JoinColumn(name = "pauta_id")
     private Pauta pauta;

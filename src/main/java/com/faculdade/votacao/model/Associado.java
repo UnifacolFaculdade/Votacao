@@ -1,6 +1,8 @@
-package com.sylviavitoria.votacao.model;
+package com.faculdade.votacao.model;
 
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -26,6 +28,7 @@ public class Associado {
     @Column(unique = true, nullable = false)
     private String cpf;
     
+    @JsonBackReference
     @OneToMany(mappedBy = "associado")
     private List<Voto> votos;
     
