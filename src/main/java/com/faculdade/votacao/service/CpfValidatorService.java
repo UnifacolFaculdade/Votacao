@@ -4,6 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.faculdade.votacao.enums.CpfStatus;
 import com.faculdade.votacao.interfaces.CpfValidatorInterface;
 
 import java.util.Random;
@@ -12,11 +13,6 @@ import java.util.Random;
 public class CpfValidatorService implements CpfValidatorInterface {
     
     private Random random = new Random();
-    
-    public enum CpfStatus {
-        ABLE_TO_VOTE,
-        UNABLE_TO_VOTE
-    }
     
     public CpfStatus validarCpf(String cpf) {
 
