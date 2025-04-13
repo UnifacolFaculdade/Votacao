@@ -1,13 +1,13 @@
-package com.sylviavitoria.votacao.controller;
+package com.faculdade.votacao.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.sylviavitoria.votacao.dto.AberturaSessaoDTO;
-import com.sylviavitoria.votacao.model.Sessao;
-import com.sylviavitoria.votacao.service.SessaoService;
+import com.faculdade.votacao.dto.AberturaSessaoDTO;
+import com.faculdade.votacao.model.Sessao;
+import com.faculdade.votacao.service.SessaoService;
 
 @RestController
 @RequestMapping("/api/v1/sessoes")

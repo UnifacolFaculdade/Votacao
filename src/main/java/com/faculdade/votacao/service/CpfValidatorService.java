@@ -1,4 +1,4 @@
-package com.sylviavitoria.votacao.service;
+package com.faculdade.votacao.service;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;

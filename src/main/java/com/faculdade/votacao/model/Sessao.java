@@ -1,4 +1,4 @@
-package com.sylviavitoria.votacao.model;
+package com.faculdade.votacao.model;
 
 import java.time.LocalDateTime;
 

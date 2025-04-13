@@ -1,9 +1,9 @@
-package com.sylviavitoria.votacao.model;
+package com.faculdade.votacao.model;
 
 import java.time.LocalDateTime;
 
+import com.faculdade.votacao.enums.OpcaoVoto;
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.sylviavitoria.votacao.enums.OpcaoVoto;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

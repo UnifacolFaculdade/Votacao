@@ -1,12 +1,12 @@
-package com.sylviavitoria.votacao.controller;
+package com.faculdade.votacao.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.sylviavitoria.votacao.model.Associado;
-import com.sylviavitoria.votacao.service.AssociadoService;
+import com.faculdade.votacao.model.Associado;
+import com.faculdade.votacao.service.AssociadoService;
 
 import java.util.List;
 

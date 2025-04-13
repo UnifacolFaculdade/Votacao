@@ -1,11 +1,11 @@
-package com.sylviavitoria.votacao.controller;
+package com.faculdade.votacao.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.sylviavitoria.votacao.service.CpfValidatorService;
-import com.sylviavitoria.votacao.service.CpfValidatorService.CpfStatus;
+import com.faculdade.votacao.service.CpfValidatorService;
+import com.faculdade.votacao.service.CpfValidatorService.CpfStatus;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,6 +1,6 @@
-package com.sylviavitoria.votacao.dto;
+package com.faculdade.votacao.dto;
 
-import com.sylviavitoria.votacao.enums.OpcaoVoto;
+import com.faculdade.votacao.enums.OpcaoVoto;
 
 import lombok.Getter;
 import lombok.Setter;

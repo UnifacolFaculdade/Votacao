@@ -1,12 +1,12 @@
-package com.sylviavitoria.votacao.service;
+package com.faculdade.votacao.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sylviavitoria.votacao.model.Pauta;
-import com.sylviavitoria.votacao.model.Sessao;
-import com.sylviavitoria.votacao.repository.PautaRepository;
-import com.sylviavitoria.votacao.repository.SessaoRepository;
+import com.faculdade.votacao.model.Pauta;
+import com.faculdade.votacao.model.Sessao;
+import com.faculdade.votacao.repository.PautaRepository;
+import com.faculdade.votacao.repository.SessaoRepository;
 
 import java.time.LocalDateTime;
 import java.util.Optional;

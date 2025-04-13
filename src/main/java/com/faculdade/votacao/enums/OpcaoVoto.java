@@ -1,4 +1,4 @@
-package com.sylviavitoria.votacao.enums;
+package com.faculdade.votacao.enums;
 
 public enum OpcaoVoto {
     SIM,

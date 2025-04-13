@@ -1,4 +1,4 @@
-package com.sylviavitoria.votacao.dto;
+package com.faculdade.votacao.dto;
 
 import lombok.Getter;
 import lombok.Setter;
